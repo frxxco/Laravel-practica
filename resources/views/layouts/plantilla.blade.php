@@ -6,6 +6,8 @@
     <title>@yield('title')</title>
     
     <!-- favicon -->
+    
+    
 </head>
 <body>
     <!-- header-->
