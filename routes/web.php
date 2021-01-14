@@ -15,19 +15,7 @@ use App\Http\Controllers\homeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', homeController::class);
-
-Route::get('cursos', [cursoController::class, 'index'])->name('cursos.index');
-
-Route::get('cursos/create', [cursoController::class, 'create'])->name('cursos.create');
-
-Route::post('cursos', [cursoController::class, 'store'])->name('cursos.store');
-
-Route::get('cursos/{curso}', [cursoController::class, 'show'])->name('cursos.show');
-
-Route::get('cursos/{curso}/edit', [cursoController::class, 'edit'])->name('cursos.edit'); 
-
-Route::put('cursos/{curso}',[cursoController::class, 'update'])->name('cursos.update');
-
-Route::delete('cursos/{curso}', [cursoController::class, 'destroy'])->name('cursos.destroy');
+ 
+ Route::get('/', homeController::class)->name('home');
+ Route::resource('cursos', CursoController::class);
+ Route::view('nosotros', 'nosotros')->name('nosotros');

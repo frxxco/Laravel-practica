@@ -6,17 +6,61 @@
     <title>@yield('title')</title>
     
     <!-- favicon -->
-    
+    <style>
+        .active{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
     
 </head>
 <body>
-    <!-- header-->
+    <!-- header-->    
     <!-- nav -->
+    <header>
+        <h1>
     
-    
-    @yield('content')
+       
+            <nav>
+       
+                <ul>
+            
+                    <li><a href="{{route('home')}}" class="{{request()->routeIs('home') ? 'active' : '' }}">Home</a>
+                
+              
+                        
+               
+           
+                    </li> 
 
-    <!-- footer -->
+            
+                    <li><a href="{{route('cursos.index')}}" class="{{request()->routeIs('cursos.index') ? 'active' : '' }}">Cursos</a>
+             
+                        
+           
+                    </li>
+
+           
+                    <li><a href="{{route('nosotros')}}" class="{{request()->routeIs('nosotros') ? 'active' : '' }}">Nosotros</a>
+              
+                     
+           
+                    </li>
+        
+                </ul>
+            
+           
+            </nav>
+        
+        </h1>
+    
+    </header>
+    
+        @yield('content')
+    
+    
+    
+    <!-- footer --> 
     <!-- script -->
     
     
